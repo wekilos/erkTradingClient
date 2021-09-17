@@ -1,0 +1,83 @@
+.tradings{
+    width: 90%;
+    margin: 0 auto;
+}
+.tradings>h2{
+    margin-top: 130px;
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    color: #252525;
+    font-weight: 450;
+}
+
+.trading-card{
+    min-height: 86px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 23px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.trading-card-clicked{
+    min-height: 86px;
+    width: 100%;
+    background-color: #038117;
+    border-radius: 23px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.trading-card>img{
+    margin-left: 5px;
+    height: 53px;
+    object-fit: contain;
+}
+.trading-card-clicked>img{
+    margin-left: 5px;
+    height: 53px;
+    object-fit: contain;
+}
+
+.trading-card>div>h3{
+    font-size: 14px;
+    color: #252525;
+    text-align: left;
+    font-weight: 450;
+}
+.trading-card-clicked > div>h3{
+    font-size: 14px;
+    color: #fff;
+    text-align: left;
+    font-weight: 500;
+}
+.trading-card>div>p{
+    text-align: left;
+    font-size: 12px;
+    color: #BABABA;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.trading-card-clicked>div>p{
+    text-align: left;
+    font-size: 12px;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 15px;
+}
+.trading-card>div>p>span{
+    color: #038117;
+}
+
+.yatyrlan{
+    color: #EE1313 !important;
+    font-weight: 500;
+}

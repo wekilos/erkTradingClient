@@ -1,0 +1,26 @@
+.home2{
+    margin-top: 150px;
+    width: 100%;
+}
+.home--button{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    height: 80px;
+    margin-bottom: 14px;
+}
+
+.home--button > p{
+    line-height: 80px;
+    font-size: 16px;
+    color: #038117;
+    margin-left: 25px;
+    text-align: left;
+}
+
+.home--button >img{
+    object-fit: contain;
+}

@@ -1,0 +1,93 @@
+.zayawka{
+    margin-top: 120px;
+    width: 100%;
+}
+
+.zayawka >h2{
+    font-size: 18px;
+    font-weight: 450;
+    color: #252525;
+    text-align: left;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.zayawka-ugry{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.zayawka-saylow{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-bottom: 3.5px;
+}
+.sayawka-ugry-saylow{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 3.5px;
+    background-color: #038117;
+}
+
+.sayawka-ugry-saylow>div>p{
+    color: #fff;
+}
+.sayawka-ugry-saylow>div>img{
+    color: #fff !important;
+}
+
+.zayawka-text{
+    display: inline-flex;
+    align-items: center;
+}
+.zayawka-text >img{
+    /* height: 20.2px; */
+    width: fit-content;
+    margin-left: 12px;
+    object-fit: contain;
+}
+.zayawka-text >p{
+    line-height: 50px;
+    text-align: center;
+    height: 35px;
+    width: fit-content;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #252525;
+}
+
+.zayawka-nokat{
+    width: 11px;
+    height: 11px;
+    background-color: #FF3600;
+    border-radius: 100%;
+    margin-right: 15px;
+
+}
+
+.hyzmatlar{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.hyzmatlar >h2{
+    font-size: 18px;
+    font-weight: 450;
+    color: #252525;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    
+}

@@ -1,0 +1,51 @@
+.login-page{
+    margin-top: 130px;
+}
+
+.login-header{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: 450;
+    color: #252525;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.login-header2{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14.92px;
+    font-weight: 450;
+    color: #252525;
+    text-align: left;
+}
+
+.login-input{
+    margin-top: 13px;
+    position: relative;
+}
+.login-input > img{
+    position: absolute;
+    right: 30px;
+    top: 40%;
+}
+
+
+.login-button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.Hasapyok{
+    width: 90%;
+    margin:5px auto;
+    padding-left: 5px;
+    text-align: left;
+    color: #038117;
+}
+
+.empty{
+    border: 1px solid ;
+    border-color: red;
+}

@@ -1,0 +1,441 @@
+.status-page{
+    width: 100%;
+    background-color: #F3F3F3;
+    height: 172vh;
+    /* height: max-content; */
+}
+
+@media screen and(max-width:321) {
+    .status-page{
+        width: 100%;
+        background-color: #F3F3F3;
+        min-height: 170vh;
+    }
+}
+
+.status{
+    margin: 0;
+    position: relative;
+}
+
+.status >.header{
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.status >.yza{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    border: none;
+    border-radius: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 18px #EEEEEE;
+}
+.status >.yza>img{
+   margin-top: 12px;
+   margin-left: -2px;
+}
+
+.status >.restart{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    border: none;
+    border-radius: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 0 18px #EEEEEE;
+}
+.status >.restart>img{
+    margin-top: 12px;
+    margin-right: -2px;
+ }
+
+ .status>.ugradylyanYoly{
+     position: absolute;
+     top: 60px;
+     left: 45px;
+     z-index: 2;
+ }
+ 
+ .status>.ugradylyanYoly>span{
+    text-align: left;
+    font-size: 14px;
+}
+ .status>.ugradylyanYoly>p{
+     text-align: left;
+     font-size: 14px;
+ }
+
+ .status>.barmalyWagt{
+    position: absolute;
+    top: 120px;
+    right: 25px;
+    z-index: 2;
+ }
+ .status>.barmalyWagt>span{
+    text-align: left;
+    font-size: 14px;
+}
+ .status>.barmalyWagt>p{
+     text-align: right;
+     font-size: 14px;
+ }
+
+
+
+ .status>.harytStatus{
+     position: absolute;
+     top: 210px;
+     left: 20px;
+     z-index: 2;
+ }
+ .status>.harytStatus>h1{
+     width: 60%;
+     margin-left: 20px;
+     text-align: left;
+     font-size: 14px;
+     color: #252525;
+     font-weight: 450;
+     margin-bottom: 15px;
+ }
+ .status>.harytStatus>div{
+     width: 90%;
+     margin: 0 auto;
+     display: inline-flex;
+     justify-content: space-between;
+ }
+ .status>.harytStatus>div>p{
+     width: 50%;
+     text-align: left;
+     font-size: 14px;
+     margin-bottom: 5px;
+ }
+.suratynyGor{
+    text-decoration: underline;
+    color: #038117;
+}
+
+.statusCards{
+    width: 90%;
+    margin: 0 auto;
+    z-index: 3;
+    position: relative;
+    top: 360px;
+}
+
+.statusCardRight{
+    z-index: 3;
+    background-color: #fff;
+    box-shadow: 0 0 20px #E8E8E8;
+    border: none;
+    border-radius: 23px;
+    min-height: 74px;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: inline-flex;
+    width: 100%;
+}
+.statusCard{
+    z-index: 3;
+    /* background-color: rgb(250, 249, 249); */
+    min-height: 74px;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: inline-flex;
+    width: 100%;
+}
+.statusCardRight>img{
+    margin-right: 15px;
+    margin-left: 5px;
+}
+.statusCard>img{
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
+.statusCardRight>div>.p{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.statusCardRight>div>.p>p{
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.statusCard>div>.p{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.statusCard>div>.p>p{
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.statusCardRight>div>p{
+    text-align: left;
+    margin-bottom: 0px;
+    color: #BABABA;
+}
+.statusCard>div>p{
+    text-align: left;
+    margin-bottom: 0px;
+    color: #BABABA;
+}
+
+
+.buttonGowushdy{
+    height: 63px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 63px;
+    color: #fff;
+    background-color: #038117;
+    border: none;
+    border-radius: 12px;
+}
+
+.restartButton:hover{
+    transform: rotate(360deg);
+    transition:  2s;
+}
+
+@media screen and (max-width:365px) {
+    .pp{
+        font-size: 12px !important;
+    }
+    
+}
+ @media screen and (max-width:350px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 310px;
+    }
+    .status>.harytStatus{
+        position: absolute;
+        top: 170px;
+        left: 10px;
+        z-index: 2;
+    }
+    .status>.ugradylyanYoly{
+        position: absolute;
+        top: 50px;
+        left: 40px;
+        z-index: 2;
+    }
+    .status>.barmalyWagt{
+        position: absolute;
+        top: 100px;
+        right: 25px;
+        z-index: 2;
+     }
+ }
+
+ @media screen and (min-width:400px) {
+    .status>.harytStatus{
+        position: absolute;
+        top: 230px;
+        left: 20px;
+        z-index: 2;
+    }
+ }
+
+ @media screen and (min-width:450px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 390px;
+    }
+    .status>.harytStatus{
+        position: absolute;
+        top: 260px;
+        left: 30px;
+        z-index: 2;
+    }
+    .status>.ugradylyanYoly{
+        position: absolute;
+        top: 80px;
+        left: 60px;
+        z-index: 2;
+    }
+    .status>.barmalyWagt{
+        position: absolute;
+        top: 150px;
+        right: 45px;
+        z-index: 2;
+     }
+ }
+
+ @media screen and (min-width:500px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 410px;
+    }
+    .status>.harytStatus{
+        position: absolute;
+        top: 280px;
+        z-index: 2;
+    } 
+}
+ @media screen and (min-width:550px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 460px;
+    }
+    .status>.harytStatus{
+        position: absolute;
+        top: 310px;
+        left: 50px;
+        z-index: 2;
+    } 
+    .status>.harytStatus>h1,
+    .status>.harytStatus>div>p,
+    .status>.harytStatus>div>span{
+        font-size: 18px;
+    }
+    .status>.ugradylyanYoly{
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        z-index: 2;
+    }
+    .status>.barmalyWagt{
+        position: absolute;
+        top: 190px;
+        right: 55px;
+        z-index: 2;
+     }
+    .status>.ugradylyanYoly>span{
+        text-align: left;
+        font-size: 18px;
+    }
+     .status>.ugradylyanYoly>p{
+         text-align: left;
+         font-size: 18px;
+     }
+     .status>.barmalyWagt>span{
+        text-align: left;
+        font-size: 18px;
+    }
+     .status>.barmalyWagt>p{
+         text-align: right;
+         font-size: 18px;
+     }
+ }
+ @media screen and (min-width:600px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 480px;
+    }
+    .status>.harytStatus{
+        position: absolute;
+        top: 330px;
+        left: 60px;
+        z-index: 2;
+    } 
+    .status>.harytStatus>h1,
+    .status>.harytStatus>div>p,
+    .status>.harytStatus>div>span{
+        font-size: 18px;
+    }
+}
+ @media screen and (min-width:650px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 560px;
+    }
+    .status>.harytStatus{
+        position: absolute;
+        top: 380px;
+        left: 60px;
+        z-index: 2;
+    } 
+    .status>.harytStatus>h1,
+    .status>.harytStatus>div>p,
+    .status>.harytStatus>div>span{
+        font-size: 22px;
+    }
+    .status>.ugradylyanYoly{
+        position: absolute;
+        top: 130px;
+        left: 100px;
+        z-index: 2;
+    }
+    .status>.barmalyWagt{
+        position: absolute;
+        top: 210px;
+        right: 55px;
+        z-index: 2;
+     }
+    .status>.ugradylyanYoly>span{
+        text-align: left;
+        font-size: 22px;
+    }
+     .status>.ugradylyanYoly>p{
+         text-align: left;
+         font-size: 22px;
+     }
+     .status>.barmalyWagt>span{
+        text-align: left;
+        font-size: 22px;
+    }
+     .status>.barmalyWagt>p{
+         text-align: right;
+         font-size: 22px;
+     }
+ }
+
+ @media screen and (min-width:700px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 600px;
+    }
+    .status>.harytStatus{
+        position: absolute;
+        top: 420px;
+        left: 60px;
+        z-index: 2;
+    } 
+}
+@media screen and (min-width:900px) {
+    .statusCards{
+        width: 90%;
+        margin: 0 auto;
+        z-index: 3;
+        position: relative;
+        top: 650px;
+    }
+    
+}

@@ -1,0 +1,36 @@
+.home{
+    background-color: #F3F3F3;
+    margin-top: 150px;
+    width: 100%;
+}
+
+.home--header{
+    color: #252525;
+    font-size: 20px;
+    font-weight: 450;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.home-buttons{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.account{
+    background-color: inherit;
+    height: 63px;
+    width: 90%;
+    margin: 0 auto;
+    
+    margin-top:24px ;
+    border-radius: 12px;
+    border: 2px dashed #038117;
+
+    font-size: 20px;
+    font-family: "Montserrat";
+    line-height: 24px;
+    color: #038117;
+}
