@@ -17,7 +17,7 @@ const App = () => {
   return (
     <BrowserRouter history={history}>
       <ScrollIntoView>
-        <Suspense fallback={<LoadingOutlined />}>
+        <Suspense fallback={<LoadingOutlined style={{fontSize:"42px",color:"green",textAlign:"center",marginTop:"35vh"}}/>}>
           <Switch>
             <PrivateRoute
               restricted={true}

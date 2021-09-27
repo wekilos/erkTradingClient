@@ -130,14 +130,15 @@ const Status = (props)=>{
                         <img style={{marginRight:"22px"}} src={data && data.statusId>1?gemegineGarashylyarGreen:gelmegineGarashylyar} alt="statusIcon"/>
                         <div>
                             <p className="p" style={{width:"100%"}}>
-                                {data && data.statusId<=1 &&<p className="pp" style={{color:"#252525",marginRight:"0px",width:"fit-content"}}>{dil=="tm"?"Gelmegine garaşylýar":"Ожидается прибытия"}</p>}
-                                {data && data.statusId>1 && <p className="pp" style={{color:"#038117",marginRight:"0px",width:"fit-content"}}>{dil=="tm"?"Gelmegine garaşylýar":"Ожидается прибытия"}</p>}
+                                {data && data.statusId<=1 &&<p className="pp" style={{color:"#252525",marginRight:"0px",width:"fit-content"}}>{dil=="tm"?"Gelmegine garaşylýar":"Прибытие"}</p>}
+                                {data && data.statusId>1 && <p className="pp" style={{color:"#038117",marginRight:"0px",width:"fit-content"}}>{dil=="tm"?"Gelmegine garaşylýar":"Прибытие"}</p>}
                                 <p className="pp" style={{marginLeft:"0px",width:"fit-content",marginRight:"0px"}}>
                                     {data && data.statusId==1? JSON.stringify(data.status_date).slice(1,11)+" "+JSON.stringify(data.status_date).slice(12,17):null}
                                     </p>
                             </p>
                             <p style={{color:"#BABABA"}}>
-                            {dil=="tm"?"Siziň ýüküňiz ammara gelmegine garaşylýar!":"Ожидается, что ваш багаж прибудет на склад!"}
+                            {dil=="tm"?"Siziň ýüküňiz ammara gelmegine garaşylýar!"
+                            :"Ожидается прибытие груза на склад в Китае!"}
                             </p>
                         </div>
                 </div>
@@ -152,7 +153,8 @@ const Status = (props)=>{
                                     </p>
                             </p>
                             <p>
-                            {dil=="tm"?"Siziň ýüküňiz ammara geldi we ugradylmagyna taýýarlanylýar!":"Ваш багаж прибыл на склад и готовится к отправке!"}
+                            {dil=="tm"?"Siziň ýüküňiz ammara geldi we ugradylmagyna taýýarlanylýar!"
+                            :"Ваш груз прибыл на наш склад и готовится к отправке!"}
                             </p>
                         </div>
                 </div>
@@ -160,14 +162,15 @@ const Status = (props)=>{
                         <img style={{marginRight:"22px"}} src={data && data.statusId>3?yukUgradyldyGreen:yukUgradyldy} alt="statusIcon"/>
                         <div>
                             <p className="p">
-                                {data && data.statusId<=3 && <p className="pp" style={{color:"#252525"}}>{dil=="tm"?"Ýüküňiz ugradyldy!":"Ваш груз отправлен!"}</p>}
-                                {data && data.statusId>3 && <p className="pp" style={{color:"#038117"}}>{dil=="tm"?"Ýüküňiz ugradyldy!":"Ваш груз отправлен!"}</p>}
+                                {data && data.statusId<=3 && <p className="pp" style={{color:"#252525"}}>{dil=="tm"?"Ýüküňiz ugradyldy":"Ваш груз отправлен"}</p>}
+                                {data && data.statusId>3 && <p className="pp" style={{color:"#038117"}}>{dil=="tm"?"Ýüküňiz ugradyldy":"Ваш груз отправлен"}</p>}
                                 <p className="pp">
                                 {data && data.statusId==3? JSON.stringify(data.status_date).slice(1,11)+" "+JSON.stringify(data.status_date).slice(12,17):null}
                                     </p>
                             </p>
                             <p>
-                              {dil=="tm"?"Siziň sargydyňyz Hytaýdan Turkmenistana ugradyldy!":"Ваш заказ отправлен из Китая в Туркменистан!"}
+                              {dil=="tm"?"Siziň sargydyňyz Hytaýdan Turkmenistana ugradyldy!"
+                              :"Ваш груз отправлен из Китая в Туркменистан!"}
                             </p>
                         </div>
                 </div>
@@ -175,14 +178,15 @@ const Status = (props)=>{
                         <img src={data && data.statusId>4?yoldaGreen:track} alt="statusIcon"/>
                         <div>
                             <p className="p">
-                                {data && data.statusId<=4 && <p className="pp" style={{color:"#252525"}}>{dil=="tm"?"Ýolda":"В пути!"}</p>}
-                                {data && data.statusId>4 && <p className="pp" style={{color:"#038117"}}>{dil=="tm"?"Ýolda":"В пути!"}</p>}
+                                {data && data.statusId<=4 && <p className="pp" style={{color:"#252525"}}>{dil=="tm"?"Ýolda":"В пути"}</p>}
+                                {data && data.statusId>4 && <p className="pp" style={{color:"#038117"}}>{dil=="tm"?"Ýolda":"В пути"}</p>}
                                 <p className="pp">
                                 {data && data.statusId==4? JSON.stringify(data.status_date).slice(1,11)+" "+JSON.stringify(data.status_date).slice(12,17):null}
                                     </p>
                             </p>
                             <p>
-                            {dil=="tm"?"Siziň ýüküňiz häzirki wagtda deňiz kenaryna golaýlaýa!":"Ваш багаж приближается к пляжу!"}
+                            {dil=="tm"?"Siziň ýüküňiz häzirki wagtda Türkmenistana golaýlaýar!"
+                            :"Ваш груз приближается к Туркменистану!"}
                             </p>
                         </div>
                 </div>
@@ -190,14 +194,14 @@ const Status = (props)=>{
                         <img style={{marginRight:"22px"}} src={data && data.statusId>5?turkmenistanaGeldiGreen:tkmAmbar} alt="statusIcon"/>
                         <div>
                             <p className="p">
-                                {data && data.statusId<=5 && <p className="pp" style={{color:"#252525"}}>{dil=="tm"?"Türkmenistanyň ammaryna geldi":"Прибыл на склад в Туркменистане"}</p>}
-                                {data && data.statusId>5 && <p className="pp" style={{color:"#038117"}}>{dil=="tm"?"Türkmenistanyň ammaryna geldi":"Прибыл на склад в Туркменистане"}</p>}
+                                {data && data.statusId<=5 && <p className="pp" style={{color:"#252525"}}>{dil=="tm"?"Türkmenistanyň gümrügine geldi":"Прибыл на таможню Туркменистана"}</p>}
+                                {data && data.statusId>5 && <p className="pp" style={{color:"#038117"}}>{dil=="tm"?"Türkmenistanyň gümrügine geldi":"Прибыл на таможню Туркменистана"}</p>}
                                 <p className="pp">
                                 {data && data.statusId==5? JSON.stringify(data.status_date).slice(1,11)+" "+JSON.stringify(data.status_date).slice(12,17):null}
                                     </p>
                             </p>
                             <p>
-                            {dil=="tm"?"Siziň ýüküňiz ülkämize gowuşdy!":"Ваш багаж прибыл в нашу страну!"}
+                            {dil=="tm"?"Siziň ýüküňiz ülkämize gowuşdy!":"Ваш груз прибыл в нашу страну!"}
                             </p>
                         </div>
                 </div>
@@ -211,7 +215,7 @@ const Status = (props)=>{
                                     </p>
                             </p>
                             <p>
-                            {dil=="tm"?"Siziň ýüküňiz ammardan size tarap ugradyldy!":"Ваш багаж отправлен вам со склада!"}
+                            {dil=="tm"?"Siziň ýüküňiz ammardan size tarap ugradyldy!":"Ваш груз отправлен вам со склада!"}
                             </p>
                         </div>
                 </div>
