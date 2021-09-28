@@ -76,3 +76,12 @@
 .trading-card>div>p>span{
     color: #038117;
 }
+
+.TrakingInput{
+    height: 50px;
+    width: 100%;
+    margin: 10px auto;
+    border:none;
+    border-radius: 16px;
+    padding-left: 15px ;
+}

@@ -14,6 +14,7 @@ const Tradings = ()=>{
     const [user,setUser] = useState(null);
     const [data,setData] = useState();
     const [trading,setTrading]=useState(null);
+    const [all,setAll] = useState(null);
     const TradingCard = async(event)=>{
         setTrading(event);
         // history.push("/status");
@@ -22,12 +23,20 @@ const Tradings = ()=>{
         window.location.href = "/status"
     }
     useEffect(async()=>{
-            setUser(JSON.parse(localStorage.getItem("erkProfile")));
-            if(localStorage.getItem("erkProfile"))
-            getData(JSON.parse(localStorage.getItem("erkProfile")).id);
-    },[])
+            const time = setTimeout(() => {
+                setUser(JSON.parse(localStorage.getItem("erkProfile")));
+                if(localStorage.getItem("erkProfile"))
+                getData(JSON.parse(localStorage.getItem("erkProfile")).id);
+                console.log(all)
+              }, 500);
+            return ()=> clearTimeout(time);
+    },[all])
     const getData = (id)=>{
-        axiosInstance.get("/api/sargytlar/"+id).then((data)=>{
+        axiosInstance.get("/api/sargytlar/"+id,{
+            params:{
+                all:all
+            }
+        }).then((data)=>{
             console.log(data.data);
             setData(data.data);
         }).catch((err)=>{
@@ -38,6 +47,7 @@ const Tradings = ()=>{
         <div className="tradings">
             <h2>{dil=="tm"?"Tracking":"Трекинг"}</h2>
 
+            <input placeholder={dil=="tm"?"Gözleg":"Поиск"} className="TrakingInput" onChange={(e)=>setAll(e.target.value)} value={all} />
 
            {data && data.map((trak)=>{
             return  <div onClick={()=>TradingCard(trak.id)} className={trading==trak.id? `trading-card-clicked` : `trading-card`}>
