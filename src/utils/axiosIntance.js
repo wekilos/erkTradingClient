@@ -1,10 +1,10 @@
 import axios from 'axios'
 import { token} from './token'
 // 95.85.120.183
- const BASE_URL = 'http://23.111.202.6:1234'
+ const BASE_URL = 'http://23.111.202.6:7777'
 const axiosInstance = axios.create({
     baseURL: BASE_URL,
-    timeout: 10000,
+    timeout: 10000000,
   
 
     headers:{
