@@ -68,8 +68,10 @@ const Zayawka = (props)=>{
     
 
     return (
-        <div >
-            <div className="zayawka">
+          
+            <div >
+       
+         <div className="zayawka">
             <h2>{dil=="tm"?"Ýük ugratmak":"Перевозки"}</h2>
             <div onClick={()=>ZayawkaSaylow(1)} className="zayawka-ugry">
                 <div className={saylow==1 ?`sayawka-ugry-saylow`: `zayawka-saylow`}>
@@ -158,8 +160,8 @@ const Zayawka = (props)=>{
                     </div>
                 </div>
             </div>
-
         </div> 
+                    
     )
 }
 

@@ -9,6 +9,7 @@ import Input from "../../components/input";
 import Button from "../../components/button";
 import upload from "../../img/upload.png"
 import { ErkContext } from "../../context/Condex";
+import {LoadingOutlined} from '@ant-design/icons';
 
 const Ugratmak = ()=>{
 
@@ -30,6 +31,7 @@ const Ugratmak = ()=>{
     const [user,setUser] = useState();
     const [check,setCheck] = useState(false);
     const [checked,setChecked] = useState(false);
+    const [ loading, setLoading] = useState(false);
    const location = useLocation();
    useEffect(() => {
     //   console.log(location.pathname); // result: '/secondpage'
@@ -54,7 +56,7 @@ const Ugratmak = ()=>{
         if((harytname!="" && harytname!=null ) && (phone!="+9936" && phone!=null )&&(kabulname!="" && kabulname!=null )&&(name!="" && name!=null )&&(guty!="" && guty!=null )&&(m3!="" && m3!=null )&&(kg!="" && kg!=null ) &&(baha!="" && baha!=null )){
             setChecked(true);
         }else{
-            setChecked(false)
+            setChecked(false);
         }
 
         let formData = new FormData();
@@ -83,6 +85,7 @@ const Ugratmak = ()=>{
         if(baha){
         formData.append("total_price",baha);}
 
+        checked &&  setLoading(true);
   checked && axiosInstance.post("/api/sargyt/create/"+user.id,formData).then((data)=>{
         console.log(data.data);
         message.success(dil=="tm"?"Üstünlikli":"Успешно");
@@ -98,15 +101,21 @@ const Ugratmak = ()=>{
         setImg1(null);
         setImg2(null);
         setImg3(null);
+        setLoading(false)
     }).catch((err)=>{
         console.log("errorr createing sargyt",err);
         message.error(dil=="tm"?"Maglumatlary dogry we doly giriziň!":"Введите информацию правильно и полностью!")
+        setLoading(false)
     })
    }
 
 
-    return(
-        <div className="zayawka-ugratmak">
+    return( 
+        <React.Fragment>
+
+        {loading && <LoadingOutlined style={{fontSize:"42px",color:"green",textAlign:"center",marginTop:"35vh"}}/>}
+          
+    {!loading && <div className="zayawka-ugratmak">
             <h2>{dil=="tm"?"Ýük ugratmak üçin zaýawka":"Заявка на отправку груза"}</h2>
             <div className="zayawka-input">
                 {check && (name=="" || name==null ) ?   <Input
@@ -253,6 +262,8 @@ const Ugratmak = ()=>{
                     <Button style={{marginBottom:"20px"}} onClick={()=>Ugrat()}> {dil=="tm"?"Ugrat":"Отправить"} </Button>
             </div>
         </div>
+    }
+    </React.Fragment>
     )
 }
 

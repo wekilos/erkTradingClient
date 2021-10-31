@@ -8,6 +8,7 @@ import { axiosInstance } from "../../utils/axiosIntance";
 import { message } from "antd";
 import { useHistory } from "react-router-dom";
 import { ErkContext } from "../../context/Condex";
+import {LoadingOutlined} from '@ant-design/icons';
 
 const Gozlemek = ()=>{
     const location = useLocation();
@@ -26,6 +27,7 @@ const Gozlemek = ()=>{
     const [active,setActive]= useState(false);
     const [check,setCheck] = useState(false);
     const [checked,setChecked] = useState(false);
+    const [ loading, setLoading] = useState(false);
 
     useEffect(()=>{
         console.log(location.pathname)
@@ -73,10 +75,11 @@ const Gozlemek = ()=>{
             if(talaplar){
             formData.append("goshmachaTalaplar",talaplar);}
 
-
+                checked && setLoading(true);
      checked &&  axiosInstance.post("/api/gozleg/create/"+user.id,formData).then((data)=>{
             console.log(data.data);
             message.success(dil=="tm"?"Üstünlikli":"Успешно");
+            setLoading(false);
             setSalgylar();
             setTalaplar();
             setBaha();
@@ -86,13 +89,18 @@ const Gozlemek = ()=>{
             history.push("/success")
         }).catch((err)=>{
             console.log(err);
-            message.warn(dil=="tm"?"Maglumatlary doly giriziň!":"Введите данные полностью!")
+            message.warn(dil=="tm"?"Maglumatlary doly giriziň!":"Введите данные полностью!");
+            setLoading(false);
         })
     }
 
     const {dil} = useContext(ErkContext);
 
     return (
+        <React.Fragment>
+            {loading && <LoadingOutlined style={{fontSize:"42px",color:"green",textAlign:"center",marginTop:"35vh"}}/>}
+          
+          {!loading &&
         <div className="harytgozlemek-page">
             <div id="first" className="harytGozlemek-first">
                 <h2>{dil=="tm"?"Haryt gözlemek":"Поиск товара"}</h2>
@@ -225,7 +233,8 @@ const Gozlemek = ()=>{
                     {active && <Button onClick={()=>Gozle()}>{dil=="tm"?"Gözle":"Поиск"}</Button>}
                 </div>
             </div>
-        </div>
+        </div>}
+        </React.Fragment>
     )
 }
 
